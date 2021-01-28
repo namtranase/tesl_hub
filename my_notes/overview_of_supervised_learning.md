@@ -36,16 +36,58 @@ _One thing important is everthing can be express by probability theory_
 Exemple with k-nearest neighbors and linear regression:
 - k-nearest neighbors approximate the $f(x) = Ave(y_i |x_i ∈ N_k (x))$. Where “Ave” denotes average, and $N_k (x)$ is the neighborhood containing the $k$ points in $T$ closest to $x$. For large training, $k/N → 0$ then:
      $f (x) → E(Y |X = x)$ 
+     
 - linear regression, we have $f(x) ≈ x^T β$ and differentiating we can solve for β theoretically:
     $β = [E(XX^T)]^{−1} E(XY )$
 
-=> So both k-nearest neighbors and least squares end up approximating conditional expectations by averages. Butm there are different:
+=> So both k-nearest neighbors and least squares end up approximating conditional expectations by averages. But there are different:
 - Least squares assumes $f(x)$ is well approximated by a globally linear function.
 - k-nearest neighbors assumes $f (x)$ is well approximated by a locally constant function.
 
-
-
-
-
-
 # Local Methods in High Dimensions
+Quite difficult so I will comback this chapter in another time (right now I'm concentrate to important part!!!)
+
+# Statistical Models, Supervised Learning and Function Approximation
+We anticipate using other classes of models for $f(x)$ , in many cases specifically designed to overcome the dimensionality problems, and here we discuss a framework for incorporating them into the prediction problem.
+
+## A Statistical Model for the Joint Distribution $Pr(X, Y )$ 
+Suppose in fact that our data arose from a statistical model:
+$Y = f (X) + ε$.
+Where the random error $ε$ has $E(ε) = 0$ and is independent of $X$.
+
+## Function Approximation
+The linear basis expansion:
+![chapter2_5.png](./pictures/chapter2_5.png)
+Where for example h k might be $x_1^2$ , $x_1 x_2^2$ , $cos(x_1)$ and so on. And use the `RSS` (residual sum-of-squares) to estimate the parameters (this method is usally use)
+
+Another choice (_more general_) to estimate is  `maximum likelihood estimation`. Suppose we have a random sample $y_i , i = 1, . . . , N$ from a density $Pr_θ (y)$ indexed by some
+parameters $θ$. The log-probability of the observed sample is:
+ 
+![chapter2_6.png](./pictures/chapter2_6.png)
+=>The principle of maximum likelihood assumes that the most reasonable values for $θ$ are those for which the probability of the observed sample is largest.
+
+
+
+
+
+
+
+
+
+# Structured Regression Models
+
+## Difficulty of the Problem
+
+# Classes of Restricted Estimators
+
+## Roughness Penalty and Bayesian Methods
+
+## Kernel Methods and Local Regression
+
+## Basis Functions and Dictionary Methods
+
+#  Model Selection and the Bias–Variance Tradeoff
+
+
+
+

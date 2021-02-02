@@ -66,16 +66,8 @@ parameters $θ$. The log-probability of the observed sample is:
 ![chapter2_6.png](./pictures/chapter2_6.png)
 =>The principle of maximum likelihood assumes that the most reasonable values for $θ$ are those for which the probability of the observed sample is largest.
 
-
-
-
-
-
-
-
-
 # Structured Regression Models
-
+Normal approach can be difficult when come with high dimension => `structured approaches`!
 ## Difficulty of the Problem
 
 # Classes of Restricted Estimators
